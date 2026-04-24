@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 Superstar — Sprint Simulation Open Environment
 
 **A multi-agent LLM-powered environment that simulates the hidden human dynamics of software project sprints, with GRPO-based self-improvement.**
@@ -150,3 +151,18 @@ R_i = 0.30×points + 0.25×quality + 0.15×collab + 0.15×morale + 0.15×energy 
 ---
 
 *Built for the OpenEnv Hackathon Apr '26*
+=======
+---
+title: SuperStar
+emoji: 🏃
+colorFrom: red
+colorTo: red
+sdk: gradio
+sdk_version: 6.13.0
+app_file: app.py
+pinned: false
+short_description: Tech team gamification in a multi agent setting
+---
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+>>>>>>> 3c834e9 (initial commit)
