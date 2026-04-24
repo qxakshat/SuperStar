@@ -1,0 +1,115 @@
+name: "E-Commerce Platform Sprint"
+description: "Build core features of an e-commerce platform in a 10-day sprint"
+sprint_days: 10
+event_frequency: 1.0
+model: "gpt-4o-mini"
+seed: 42
+
+agents:
+  - agent_id: manager_1
+    name: "Sarah Chen"
+    role: manager
+    skill_level: 0.85
+    personality: strategic
+    reliability: 0.9
+    specialization: leadership
+    wfh_tendency: 0.1
+    is_human: false
+
+  - agent_id: eng_1
+    name: "Alex Rivera"
+    role: engineer
+    skill_level: 0.8
+    personality: aggressive
+    reliability: 0.85
+    specialization: backend
+    wfh_tendency: 0.3
+    is_human: false
+
+  - agent_id: eng_2
+    name: "Jamie Park"
+    role: engineer
+    skill_level: 0.7
+    personality: cautious
+    reliability: 0.9
+    specialization: frontend
+    wfh_tendency: 0.1
+    is_human: false
+
+  - agent_id: eng_3
+    name: "Morgan Taylor"
+    role: engineer
+    skill_level: 0.6
+    personality: creative
+    reliability: 0.7
+    specialization: fullstack
+    wfh_tendency: 0.4
+    is_human: false
+
+  - agent_id: eng_4
+    name: "Casey Nguyen"
+    role: engineer
+    skill_level: 0.9
+    personality: balanced
+    reliability: 0.95
+    specialization: devops
+    wfh_tendency: 0.2
+    is_human: false
+
+backlog:
+  - id: T1
+    title: "Set up CI/CD pipeline"
+    story_points: 5
+  - id: T2
+    title: "Design database schema"
+    story_points: 8
+  - id: T3
+    title: "Implement user auth API"
+    story_points: 8
+    dependencies: ["T2"]
+  - id: T4
+    title: "Build login/signup UI"
+    story_points: 5
+    dependencies: ["T3"]
+  - id: T5
+    title: "Create product listing API"
+    story_points: 5
+    dependencies: ["T2"]
+  - id: T6
+    title: "Build product catalog page"
+    story_points: 8
+    dependencies: ["T5"]
+  - id: T7
+    title: "Implement search functionality"
+    story_points: 5
+    dependencies: ["T5"]
+  - id: T8
+    title: "Shopping cart backend"
+    story_points: 8
+    dependencies: ["T3", "T5"]
+  - id: T9
+    title: "Shopping cart UI"
+    story_points: 5
+    dependencies: ["T8", "T4"]
+  - id: T10
+    title: "Payment integration"
+    story_points: 13
+    dependencies: ["T8"]
+  - id: T11
+    title: "Write unit tests"
+    story_points: 5
+  - id: T12
+    title: "Performance optimization"
+    story_points: 3
+    dependencies: ["T6"]
+  - id: T13
+    title: "Deploy to staging"
+    story_points: 3
+    dependencies: ["T1"]
+  - id: T14
+    title: "Integration testing"
+    story_points: 5
+    dependencies: ["T13"]
+  - id: T15
+    title: "Documentation"
+    story_points: 3

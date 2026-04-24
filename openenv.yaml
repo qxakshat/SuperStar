@@ -1,0 +1,28 @@
+name: superstar-sprint
+version: "1.0.0"
+description: |
+  Multi-agent sprint simulation environment with hidden dynamics.
+  Models the human layer of software project management — morale, burnout,
+  interpersonal tension, and information asymmetry between engineers and managers.
+  Trainable environment LLM improves project outcomes via GRPO.
+
+type: docker
+port: 8001
+entry_point: app:app
+
+metadata:
+  themes:
+    - multi-agent-interactions
+    - long-horizon-planning
+    - project-management
+    - self-improvement
+  episode_length: 10
+  observation_type: text
+  action_type: json
+  num_agents: 5
+  reward_type: composite
+
+environment:
+  OPENAI_API_KEY: ""
+  DEFAULT_SCENARIO: "default"
+  DEFAULT_MODEL: "gpt-4o-mini"
